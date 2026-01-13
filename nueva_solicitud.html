@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nueva solicitud | Oficina Virtual</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="ofv-header">
+      <div class="ofv-header-inner">
+        <div class="ofv-brand">
+          <img class="ofv-logo" src="./assets/img/dgii-logo.png" alt="DGII" />
+        </div>
+
+        <nav class="ofv-mini">
+          <a href="inicio.html">MI CUENTA</a>
+          <span class="sep">|</span>
+          <a href="#">SALIR</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebarMenu">
+        <div class="sidebar-title">Menú Oficina Virtual</div>
+
+        <a class="nav-item" href="inicio.html"><span class="dot"></span> Inicio</a>
+
+        <details class="nav-group">
+          <summary class="nav-item">
+            <span class="dot"></span>
+            <span>Declaraciones Juradas</span>
+            <span class="chev">▶</span>
+          </summary>
+          <div class="nav-sub">
+            <a class="nav-subitem" href="#">Declaración Interactiva</a>
+            <a class="nav-subitem" href="#">Declaración IR-3</a>
+            <a class="nav-subitem" href="#">Declaraciones en Cero</a>
+            <a class="nav-subitem" href="#">Declaración Hidrocarburos</a>
+            <a class="nav-subitem" href="#">Declaración IR-13</a>
+            <a class="nav-subitem" href="#">Declaraciones Rectificativas</a>
+            <a class="nav-subitem" href="#">DTOR</a>
+            <a class="nav-subitem" href="#">Declaración RST</a>
+            <a class="nav-subitem" href="#">Declaración Contribución GLP</a>
+            <a class="nav-subitem" href="#">Envíos Complementarios</a>
+          </div>
+        </details>
+
+        <a class="nav-item active" href="solicitudes.html"><span class="dot"></span> Solicitudes</a>
+        <a class="nav-item" href="#"><span class="dot"></span> Citas</a>
+        <a class="nav-item" href="#"><span class="dot"></span> Notificaciones</a>
+        <a class="nav-item" href="#"><span class="dot"></span> Ayuda</a>
+      </aside>
+
+      <!-- Content -->
+      <main class="content">
+        <div style="margin-bottom: 14px;">
+          <a href="solicitudes.html" style="text-decoration:none; color:#6b6b6b; font-weight:800;">
+            ← Volver a Solicitudes
+          </a>
+        </div>
+
+        <div class="page-header">
+          <h1>Nueva solicitud</h1>
+          <p>Seleccione el tipo de solicitud y complete los pasos requeridos.</p>
+        </div>
+
+        <!-- Stepper simple -->
+        <div class="wizard-steps">
+          <div class="wstep active" data-step="1">
+            <div class="wstep-num">1</div>
+            <div class="wstep-txt">Datos de la solicitud</div>
+          </div>
+          <div class="wstep" data-step="2">
+            <div class="wstep-num">2</div>
+            <div class="wstep-txt">Datos del contribuyente</div>
+          </div>
+          <div class="wstep" data-step="3">
+            <div class="wstep-num">3</div>
+            <div class="wstep-txt">Documentos a cargar</div>
+          </div>
+        </div>
+
+        <!-- PASO 1 -->
+        <section class="panel wizard-panel" id="step1">
+          <div class="panel-title">Datos de la solicitud</div>
+          <div class="panel-body">
+            <div class="field">
+              <label for="tipoSolicitud">Tipo de solicitud</label>
+              <select id="tipoSolicitud">
+                <option value="">Seleccione…</option>
+                <option value="acuerdo_pago">
+                  Solicitud de Acuerdo de Pago (RR, RC, FISC y CC)
+                </option>
+                <!-- Esto es para otras solicitudes -->
+              </select>
+            </div>
+
+            <!-- Informacion de la solicit aparece SOLO después de seleccionar -->
+            <div class="ns-info" id="infoSolicitud" hidden>
+              <div class="ns-info-grid">
+                <div class="ns-info-item">
+                  <div class="ns-info-label">Código</div>
+                  <div class="ns-info-value" id="infoCodigo">—</div>
+                </div>
+
+                <div class="ns-info-item">
+                  <div class="ns-info-label">Costo</div>
+                  <div class="ns-info-value" id="infoCosto">—</div>
+                </div>
+
+                <div class="ns-info-item">
+                  <div class="ns-info-label">Tiempo de respuesta</div>
+                  <div class="ns-info-value" id="infoTiempo">—</div>
+                </div>
+
+                <div class="ns-info-item">
+                  <div class="ns-info-label">Respuesta resultante</div>
+                  <div class="ns-info-value" id="infoRespuesta">—</div>
+                </div>
+              </div>
+
+              <div style="margin-top: 12px;">
+                <div class="ns-info-label" style="margin-bottom: 6px;">Descripción</div>
+                <div class="ns-info-value" id="infoDescripcion">—</div>
+              </div>
+            </div>
+
+            <div class="wizard-actions">
+              <button class="btn" id="btnNext1" disabled>SIGUIENTE</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PASO 2 -->
+        <section class="panel wizard-panel" id="step2" hidden>
+          <div class="panel-title">Datos del contribuyente</div>
+          <div class="panel-body">
+            <div class="form-grid">
+              <div class="field">
+                <label for="rnc">RNC / Cédula</label>
+                <input id="rnc" type="text" placeholder="Ej: 401-1234567-8" />
+              </div>
+
+              <div class="field">
+                <label for="razon">Nombre / Razón social</label>
+                <input id="razon" type="text" placeholder="Ej: Juan Pérez / Empresa SRL" />
+              </div>
+
+              <div class="field">
+                <label for="correo">Correo</label>
+                <input id="correo" type="email" placeholder="correo@ejemplo.com" />
+              </div>
+
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" type="tel" placeholder="809-000-0000" />
+              </div>
+            </div>
+
+            <div class="wizard-actions">
+              <button class="btn" id="btnBack2">ATRÁS</button>
+              <button class="btn" id="btnNext2" disabled>SIGUIENTE</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PASO 3 -->
+        <section class="panel wizard-panel" id="step3" hidden>
+          <div class="panel-title">Documentos a cargar</div>
+          <div class="panel-body">
+            <div class="docs-note">
+              Suba los documentos requeridos en PDF. Tamaño máximo: 5MB por archivo.
+            </div>
+
+            <div id="docsContainer" class="docs-grid"></div>
+
+            <div class="wizard-actions">
+              <button class="btn" id="btnBack3">ATRÁS</button>
+              <button class="btn" id="btnSubmit" disabled>ENVIAR SOLICITUD</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Info general -->
+        <section class="info">
+          <div class="info-title">Información importante</div>
+          <div class="info-text">
+            Los documentos adjuntos deben estar en formato PDF y no exceder los 5MB.
+            Los tiempos de respuesta dependerán del tipo de solicitud.
+          </div>
+        </section>
+
+        <script src="./js/nueva_solicitud.js"></script>
+      </main>
+    </div>
+  </body>
+</html>

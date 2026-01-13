@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solicitudes | Oficina Virtual</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <header class="ofv-header">
+      <div class="ofv-header-inner">
+        <div class="ofv-brand">
+          <img class="ofv-logo" src="./assets/img/dgii-logo.png" alt="DGII" />
+        </div>
+
+        <nav class="ofv-mini">
+          <a href="inicio.html">MI CUENTA</a>
+          <span class="sep">|</span>
+          <a href="#">SALIR</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- ✅ IMPORTANTE: id="sidebarMenu" -->
+      <aside class="sidebar" id="sidebarMenu">
+        <div class="sidebar-title">Menú Oficina Virtual</div>
+
+        <a class="nav-item" href="inicio.html">
+          <span class="dot"></span> Inicio
+        </a>
+
+        <details class="nav-group">
+          <summary class="nav-item">
+            <span class="dot"></span>
+            <span>Declaraciones Juradas</span>
+            <span class="chev">▶</span>
+          </summary>
+
+          <div class="nav-sub">
+            <a class="nav-subitem" href="#">Declaración Interactiva</a>
+            <a class="nav-subitem" href="#">Declaración IR-3</a>
+            <a class="nav-subitem" href="#">Declaraciones en Cero</a>
+            <a class="nav-subitem" href="#">Declaración Hidrocarburos</a>
+            <a class="nav-subitem" href="#">Declaración IR-13</a>
+            <a class="nav-subitem" href="#">Declaraciones Rectificativas</a>
+            <a class="nav-subitem" href="#">DTOR</a>
+            <a class="nav-subitem" href="#">Declaración RST</a>
+            <a class="nav-subitem" href="#">Declaración Contribución GLP</a>
+            <a class="nav-subitem" href="#">Envíos Complementarios</a>
+          </div>
+        </details>
+
+        <a class="nav-item active" href="solicitudes.html">
+          <span class="dot"></span> Solicitudes
+        </a>
+
+        <a class="nav-item" href="#"><span class="dot"></span> Citas</a>
+
+        <a class="nav-item" href="#">
+          <span class="dot"></span> Notificaciones
+        </a>
+
+        <a class="nav-item" href="#"><span class="dot"></span> Ayuda</a>
+      </aside>
+
+      <main class="content">
+        <div class="page-header">
+          <h1>Solicitudes</h1>
+          <p>
+            Gestione sus trámites, consulte el historial y verifique el estatus
+            en tiempo real.
+          </p>
+        </div>
+
+        <section class="kpis">
+          <div class="kpi">
+            <div class="kpi-label">Solicitudes activas</div>
+            <div class="kpi-value">2</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Pendientes de documentos</div>
+            <div class="kpi-value">1</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Finalizadas (histórico)</div>
+            <div class="kpi-value">8</div>
+          </div>
+        </section>
+
+        <h2 class="section-title with-line">Gestión de solicitudes</h2>
+
+        <section class="cards">
+          <article class="card">
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M19 3H8a2 2 0 0 0-2 2v3H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-3h1a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm-3 18H5V10h11v11Zm5-5h-1V10a2 2 0 0 0-2-2H8V5h11v11Zm-9-4h-2v2H8v2h2v2h2v-2h2v-2h-2v-2Z"
+                />
+              </svg>
+            </div>
+            <div class="card-title">Nueva solicitud</div>
+            <div class="card-desc">
+              Inicie una nueva solicitud y adjunte los documentos requeridos de
+              forma digital.
+            </div>
+            <a class="btn" href="nueva_solicitud.html">INICIAR</a>
+          </article>
+
+          <article class="card">
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2Zm10 16H4V6h5.2l2 2H20v12Z"
+                />
+              </svg>
+            </div>
+            <div class="card-title">Solicitudes anteriores</div>
+            <div class="card-desc">
+              Consulte el historial completo de sus trámites realizados
+              anteriormente.
+            </div>
+            <a class="btn" href="solicitudes_anteriores.html">VER HISTORIAL</a>
+          </article>
+
+          <article class="card">
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 12h4l3-8 4 16 3-8h4v2h-3l-4 10-4-16-3 8H3v-2Z" />
+              </svg>
+            </div>
+            <div class="card-title">Estado de solicitudes</div>
+            <div class="card-desc">
+              Verifique en qué etapa se encuentra su proceso de solicitud
+              actual.
+            </div>
+            <a class="btn" href="Estado_solicitudes.html">CONSULTAR</a>
+          </article>
+        </section>
+
+        <div class="table-head with-line">
+          <h2 class="section-title">Últimas solicitudes</h2>
+          <button class="btn small">VER TODAS</button>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th># Solicitud</th>
+                <th>Tipo de Trámite</th>
+                <th>Fecha Registro</th>
+                <th>Estatus Actual</th>
+                <th class="td-right">Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SOL-2026-00021</td>
+                <td>Certificación de IPI</td>
+                <td>08/01/2026</td>
+                <td><span class="badge blue">En revisión</span></td>
+                <td class="td-right"><button class="btn small">VER</button></td>
+              </tr>
+              <tr>
+                <td>SOL-2025-01088</td>
+                <td>Actualización de RNC</td>
+                <td>15/10/2025</td>
+                <td><span class="badge yellow">Pendiente docs</span></td>
+                <td class="td-right"><button class="btn small">VER</button></td>
+              </tr>
+              <tr>
+                <td>SOL-2025-00612</td>
+                <td>Reclamación de Pago</td>
+                <td>02/06/2025</td>
+                <td><span class="badge green">Finalizada</span></td>
+                <td class="td-right"><button class="btn small">VER</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <section class="info">
+          <div class="info-title">Información importante</div>
+          <div class="info-text">
+            Los documentos adjuntos deben estar en formato PDF y no exceder los
+            5MB. Los tiempos de respuesta dependerán del tipo de solicitud.
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

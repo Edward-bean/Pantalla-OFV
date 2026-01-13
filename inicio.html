@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inicio | Oficina Virtual</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="ofv-header">
+      <div class="ofv-header-inner">
+        <div class="ofv-brand">
+          <img class="ofv-logo" src="./assets/img/dgii-logo.png" alt="DGII" />
+        </div>
+
+        <nav class="ofv-mini">
+          <a href="inicio.html">MI CUENTA</a>
+          <span class="sep">|</span>
+          <a href="#">SALIR</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- ✅ IMPORTANTE: id="sidebarMenu" -->
+      <aside class="sidebar" id="sidebarMenu">
+        <div class="sidebar-title">Menú Oficina Virtual</div>
+
+        <a class="nav-item active" href="inicio.html">
+          <span class="dot"></span> Inicio
+        </a>
+
+        <details class="nav-group">
+          <summary class="nav-item">
+            <span class="dot"></span>
+            <span>Declaraciones Juradas</span>
+            <span class="chev">▶</span>
+          </summary>
+          <div class="nav-sub">
+            <a class="nav-subitem" href="#">Declaración Interactiva</a>
+            <a class="nav-subitem" href="#">Declaración IR-3</a>
+            <a class="nav-subitem" href="#">Declaraciones en Cero</a>
+            <a class="nav-subitem" href="#">Declaración Hidrocarburos</a>
+            <a class="nav-subitem" href="#">Declaración IR-13</a>
+            <a class="nav-subitem" href="#">Declaraciones Rectificativas</a>
+            <a class="nav-subitem" href="#">DTOR</a>
+            <a class="nav-subitem" href="#">Declaración RST</a>
+            <a class="nav-subitem" href="#">Declaración Contribución GLP</a>
+            <a class="nav-subitem" href="#">Envíos Complementarios</a>
+          </div>
+        </details>
+
+        <a class="nav-item" href="solicitudes.html">
+          <span class="dot"></span> Solicitudes
+        </a>
+
+        <a class="nav-item" href="#"><span class="dot"></span> Citas</a>
+
+        <a class="nav-item" href="#">
+          <span class="dot"></span> Notificaciones
+        </a>
+
+        <a class="nav-item" href="#"><span class="dot"></span> Ayuda</a>
+      </aside>
+
+      <main class="content">
+        <h1 style="margin: 0 0 8px; font-size: 28px">
+          Obligaciones próximas a vencer
+        </h1>
+        <p style="margin: 0 0 18px; color: #555">
+          Visualice sus vencimientos y fechas límites de presentación y pago.
+        </p>
+
+        <div class="inicio-grid">
+          <!-- Obligaciones -->
+          <section class="panel">
+            <div class="panel-title">Obligaciones</div>
+            <div class="panel-body">
+              <table class="simple-table">
+                <thead>
+                  <tr>
+                    <th>Impuesto</th>
+                    <th>Nombre</th>
+                    <th>Próximo vencimiento</th>
+                    <th>Días faltantes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>IR3</td>
+                    <td>Retenciones y retrib. en renta</td>
+                    <td>18/12/2025</td>
+                    <td><span class="due due-late">Vencido</span></td>
+                  </tr>
+                  <tr>
+                    <td>ITB</td>
+                    <td>ITBIS</td>
+                    <td>20/01/2026</td>
+                    <td><span class="due due-soon">9</span></td>
+                  </tr>
+                  <tr>
+                    <td>IR1</td>
+                    <td>Impuesto a la renta pers. fis.</td>
+                    <td>31/03/2026</td>
+                    <td><span class="due">79</span></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div style="margin-top: 12px">
+                <button class="btn small">VER DEUDAS PENDIENTES</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Calendario + fechas -->
+          <section class="panel">
+            <div class="panel-title">Fechas límites</div>
+            <div class="panel-body">
+              <div class="calendar-head">
+                <div>
+                  <span class="calendar-month">Enero</span>
+                  <span class="calendar-year">2026</span>
+                </div>
+              </div>
+
+              <table class="calendar">
+                <thead>
+                  <tr>
+                    <th>Dom</th>
+                    <th>Lun</th>
+                    <th>Mar</th>
+                    <th>Mié</th>
+                    <th>Jue</th>
+                    <th>Vie</th>
+                    <th>Sáb</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td class="muted">28</td>
+                    <td class="muted">29</td>
+                    <td class="muted">30</td>
+                    <td class="muted">31</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td class="today">11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                  </tr>
+                  <tr>
+                    <td>18</td>
+                    <td>19</td>
+                    <td class="deadline-day">20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                  </tr>
+                  <tr>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="deadline-box">
+                <div class="deadline-title">
+                  Fechas límites de presentación y pago
+                </div>
+                <div class="deadline-pill">
+                  <span>20.</span>
+                  <span>ITBIS</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- ✅ IMPORTANTE: cargar el JS -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
