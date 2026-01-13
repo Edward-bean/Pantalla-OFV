@@ -1,4 +1,4 @@
-// Datos de ejemplo (luego puedes cargarlo desde un JSON o API)
+// Datos de ejemplo
 const tipos = {
   acuerdo_pago: {
     titulo: "Solicitud de Acuerdo de Pago (deudas en RR, RC, FISC y CC)",
@@ -211,7 +211,7 @@ btnBack3.addEventListener("click", () => setStep(2));
 
 // Submit (demo)
 btnSubmit.addEventListener("click", () => {
-  alert("Solicitud enviada (demo). Aquí luego conectas con backend.");
+  alert("Solicitud enviada (demo).");
 });
 
 // inicial

@@ -126,7 +126,7 @@ summary { list-style: none; outline: none; }
 
 .nav-group[open] .chev { transform: rotate(90deg); color: var(--green); }
 
-/* Espaciado extra al cerrar/abrir para que no quede pegado */
+/* Espaciado extra al cerrar/abrir */
 .nav-group { margin-bottom: 6px; }
 
 .nav-sub {
@@ -195,13 +195,13 @@ summary { list-style: none; outline: none; }
 .kpi-label { color: var(--muted); font-size: 13px; font-weight: 500; }
 .kpi-value { font-size: 28px; font-weight: 800; margin-top: 4px; color: #333; }
 
-/* ===== Section titles (como tu “segunda foto”: subrayado corto) ===== */
+/* ===== Section titles ===== */
 .section-title {
   color: var(--green);
   font-size: 18px;
   font-weight: 800;
   margin: 24px 0 16px;
-  display: inline-block;        /* subrayado corto (solo el texto) */
+  display: inline-block;        
   padding-bottom: 6px;
   border-bottom: 1px solid #bfe6c8;
 }
@@ -245,7 +245,7 @@ summary { list-style: none; outline: none; }
   flex-grow: 1;
 }
 
-/* ===== Buttons (todos iguales: outline) ===== */
+/* ===== Buttons ===== */
 .btn {
   height: 36px;
   padding: 0 16px;
@@ -272,14 +272,14 @@ summary { list-style: none; outline: none; }
 
 .btn.small { height: 28px; padding: 0 12px; font-size: 11px; }
 
-/* ===== Table head (línea que SÍ llegue al final aunque haya botón) ===== */
+/* ===== Table head ===== */
 .table-head.with-line {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 26px;
-  padding-bottom: 10px; /* espacio para la línea */
+  padding-bottom: 10px; 
 }
 
 .table-head.with-line::after {
@@ -293,16 +293,16 @@ summary { list-style: none; outline: none; }
 }
 
 .table-head.with-line .section-title {
-  margin: 0;            /* para que no empuje raro */
-  border-bottom: none;  /* aquí NO queremos subrayado corto */
+  margin: 0;           
+  border-bottom: none;
   padding-bottom: 0;
 }
 
-/* ===== Tabla Solicitudes (solo esta) ===== */
+/* ===== Tabla Solicitude ===== */
 .table-wrap {
   border: 1px solid var(--border);
   border-radius: 10px;
-  overflow-x: auto;     /* IMPORTANTÍSIMO */
+  overflow-x: auto;  
   background: #fff;
   box-shadow: var(--shadow);
   margin-top: 12px;
