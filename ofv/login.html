@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Acceso | Oficina Virtual</title>
+
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+
+  <body>
+    <div class="ofv-shell">
+      <header class="ofv-header">
+        <div class="ofv-header-inner">
+          <div class="ofv-brand">
+            <img class="ofv-logo" src="../assets/img/dgii-logo.png" alt="DGII" />
+          </div>
+
+          <nav class="ofv-mini">
+            <a href="../index.html">VOLVER</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="auth-page">
+        <!-- Columna izquierda: menú informativo (demo) -->
+        <aside class="public-menu">
+          <div class="public-menu-title">Inscripción y Actualización al RNC</div>
+          <a class="public-menu-item" href="#">Inscripción y Actualización al RNC</a>
+          <a class="public-menu-item" href="#">Régimen Simplificado de Tributación</a>
+          <a class="public-menu-item" href="#">Seguimiento de Solicitudes al RNC</a>
+
+          <div class="public-menu-title" style="margin-top: 12px;">Guía servicios</div>
+          <a class="public-menu-item" href="#">Claves de Acceso</a>
+          <a class="public-menu-item" href="#">Dispositivos de Seguridad</a>
+          <a class="public-menu-item" href="#">Simuladores Declaraciones Juradas</a>
+          <a class="public-menu-item" href="#">Preguntas Frecuentes</a>
+          <a class="public-menu-item" href="#">Instructivos</a>
+        </aside>
+
+        <!-- Centro: contenido -->
+        <section class="auth-content">
+          <h1 class="auth-title">Oficina Virtual</h1>
+
+          <div class="auth-two-col">
+            <div class="auth-welcome">
+              <h2 class="auth-welcome-title">Bienvenido(a) a la Oficina Virtual de la DGII</h2>
+              <p class="auth-welcome-text">
+                Gracias por ingresar a la Oficina Virtual de la DGII, un medio que le permitirá cumplir
+                de forma segura y oportuna con la declaración y pago de impuestos, sin necesidad de
+                trasladarse a nuestras oficinas.
+              </p>
+            </div>
+
+            <div class="auth-card">
+              <div class="auth-card-head">Acceso</div>
+
+              <form class="auth-form" id="authForm" data-redirect="../ofv/inicio.html" novalidate>
+                <div class="field">
+                  <label for="email">Usuario</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="correo@dgii.gob.do"
+                    autocomplete="username"
+                    required
+                  />
+                  <div class="field-error" data-error="email"></div>
+                </div>
+
+                <div class="field">
+                  <label for="password">Clave</label>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    placeholder="Mínimo 8 caracteres"
+                    autocomplete="current-password"
+                    required
+                  />
+                  <div class="field-error" data-error="password"></div>
+                </div>
+
+                <div class="auth-actions">
+                  <button class="btn auth-btn" type="submit">ENTRAR</button>
+                </div>
+
+                <div class="auth-links">
+                  <a href="#">Solicitar Clave</a>
+                  <a href="#">¿Olvidó su Clave?</a>
+                  <a href="#">Desactivar Token Digital</a>
+                  <a href="#">¿Olvidó su Correo?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="ofv-footer">
+        <div>
+          Copyright DGII © 2026 . Todos los Derechos Reservados.
+          <a href="#">Términos de uso</a> | <a href="#">Privacidad</a>
+        </div>
+        <div class="line2">
+          Telf. 689-2181 · Av. México #48, Santo Domingo, Rep. Dom.
+        </div>
+      </footer>
+    </div>
+
+    <script src="../js/auth.js"></script>
+  </body>
+</html>

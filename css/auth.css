@@ -1,0 +1,207 @@
+/* Centro de auth */
+.auth-center{
+  padding: 28px 18px 34px;
+  display: grid;
+  place-items: center;
+}
+
+/* Página auth con menú */
+.auth-page{
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 18px;
+  padding: 18px;
+}
+
+/* Menú público demo (izquierda) */
+.public-menu{
+  border-right: 1px solid var(--border);
+  padding: 10px 10px 10px 6px;
+}
+.public-menu-title{
+  font-weight: 900;
+  color: var(--green);
+  margin: 10px 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.public-menu-item{
+  display:block;
+  padding: 8px 8px;
+  border-radius: 6px;
+  color:#333;
+  text-decoration:none;
+  font-weight: 700;
+  font-size: 12px;
+}
+.public-menu-item:hover{ background:#f6f6f6; }
+
+/* Contenido */
+.auth-content{ padding: 8px 8px 8px 10px; }
+
+.auth-title{
+  margin: 2px 0 8px;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--green);
+}
+.auth-subtitle{
+  margin: 0 0 16px;
+  color:#555;
+  font-weight: 600;
+}
+
+/* Layout 2 columnas en login OFV */
+.auth-two-col{
+  display: grid;
+  grid-template-columns: 1.2fr 420px;
+  gap: 18px;
+  align-items: start;
+}
+.auth-welcome{
+  border-top: 1px solid #bfe6c8;
+  padding-top: 14px;
+}
+.auth-welcome-title{
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 900;
+  color:#222;
+}
+.auth-welcome-text{
+  margin: 0;
+  color:#555;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* Card */
+.auth-card{
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  background:#fff;
+  overflow: hidden;
+}
+.auth-card-head{
+  background: var(--green);
+  color:#fff;
+  padding: 12px 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .4px;
+}
+
+.auth-card--solo{
+  width: min(520px, 100%);
+}
+.auth-solo-sub{
+  padding: 14px 14px 0;
+  color:#555;
+  font-weight: 700;
+}
+
+/* Form */
+.auth-form{
+  padding: 14px;
+}
+.field-error{
+  display:none;
+  margin-top: 6px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #f5c2c7;
+  background: #fde2e2;
+  color: #842029;
+  font-weight: 800;
+  font-size: 12px;
+}
+.auth-actions{
+  margin-top: 12px;
+  display:flex;
+  justify-content: flex-end;
+}
+.auth-btn{ width: 160px; justify-content:center; }
+
+.auth-links{
+  margin-top: 12px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  font-size: 12px;
+}
+.auth-links--center{
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.auth-links a{
+  color: var(--green);
+  font-weight: 900;
+  text-decoration:none;
+}
+.auth-links a:hover{ text-decoration: underline; }
+
+/* Selector */
+.auth-chooser{
+  width: min(860px, 100%);
+  padding: 4px 0 0;
+}
+.chooser-grid{
+  margin-top: 14px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.chooser-card{
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  background:#fff;
+  padding: 16px;
+  text-decoration:none;
+  color:#222;
+  display:flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.chooser-card:hover{
+  border-color: #cfe8d3;
+  transform: translateY(-1px);
+}
+.chooser-badge{
+  display:inline-flex;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background:#e9f5ea;
+  border: 1px solid #cfe8d3;
+  color:#1e7a2e;
+  font-weight: 900;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.chooser-badge.alt{
+  background:#e8f1fb;
+  border-color:#cfe1f7;
+  color:#1f5f8b;
+}
+.chooser-name{ font-weight: 900; font-size: 18px; }
+.chooser-desc{ color:#555; font-weight: 600; line-height:1.5; }
+.chooser-action{
+  margin-top: 6px;
+  color: var(--green);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* Responsive auth */
+@media (max-width: 1024px){
+  .auth-page{ grid-template-columns: 1fr; }
+  .public-menu{ border-right: none; border-bottom: 1px solid var(--border); }
+  .auth-two-col{ grid-template-columns: 1fr; }
+  .chooser-grid{ grid-template-columns: 1fr; }
+  .auth-actions{ justify-content: stretch; }
+  .auth-btn{ width: 100%; }
+}

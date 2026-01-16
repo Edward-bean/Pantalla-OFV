@@ -1,0 +1,196 @@
+:root {
+  --green: #2fa64a;
+  --green-2: #76c85c;
+  --text: #222;
+  --muted: #666;
+  --border: #e6e6e6;
+  --bg: #f9f9f9;
+  --card: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,.04);
+}
+
+* { box-sizing: border-box; }
+
+
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+
+  /* ✅ Sticky footer base */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Marco / Contenedor general (como OFV real) ===== */
+.ofv-shell{
+  max-width: 1200px;
+  margin: 18px auto 0;                 /* aire arriba/abajo */
+  background: #fff;                  /* el “papel” */
+  border: 1px solid var(--border);   /* borde del marco */
+  box-shadow: var(--shadow);
+
+  /* ✅ Sticky footer: el marco ocupa al menos la pantalla */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 18px);    /* 18px top + 18px bottom */
+}
+
+/* ✅ Cualquier contenido principal empuja el footer hacia abajo */
+.ofv-shell > main { flex: 1 0 auto; }
+.ofv-shell > .layout { flex: 1 0 auto; }
+.ofv-shell > .auth-center { flex: 1 0 auto; }
+.ofv-shell > .auth-page { flex: 1 0 auto; }
+
+/* ===== Header OFV ===== */
+.ofv-header {
+  border-bottom: 1px solid #d9d9d9;
+  background: #fff; /* ✅ fuera del ancho del diseño: limpio/blanco */
+}
+
+.ofv-header-inner {
+  max-width: 1200px;
+  height: 102px;
+  margin: 0 auto;
+
+  /* ✅ el verde SOLO dentro del ancho del diseño */
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,.07) 0 70px,
+      rgba(255,255,255,0) 70px 140px
+    ),
+    linear-gradient(90deg, #ffffff 0%, #eaf6e5 30%, #7bcf63 55%, #2fa64a 100%);
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 20px 0;
+}
+
+.ofv-logo {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+
+/* Top links (derecha) */
+.ofv-mini {
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.ofv-mini a {
+  color: #333;
+  text-decoration: none;
+}
+
+.ofv-mini a:hover {
+  text-decoration: underline;
+}
+
+.ofv-mini .sep {
+  margin: 0 8px;
+  color: #ccc;
+}
+
+/* ==============================
+   Footer (copyright) - estilo limpio
+============================== */
+.ofv-footer{
+  border-top: 1px solid var(--border);
+  padding: 22px 16px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0,0,0,.55);
+  background: #fff;
+
+  /* ✅ Sticky: footer no “sube” */
+  margin-top: auto;
+}
+
+.ofv-footer a{
+  color: var(--green);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.ofv-footer a:hover{ text-decoration: underline; }
+
+.ofv-footer .line2{
+  margin-top: 6px;
+  color: rgba(0,0,0,.6);
+  font-weight: 700;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 18px;
+  border: 1px solid var(--green);
+  background: transparent;
+  color: var(--green);
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--green);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn.small { height: 28px; padding: 0 12px; font-size: 11px; }
+
+/* ===== Fields base ===== */
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  color: #444;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #bfe6c8;
+  box-shadow: 0 0 0 3px rgba(47, 166, 74, 0.12);
+}
+
+@media (max-width: 1024px) {
+  .ofv-header-inner { width: 100%; height: auto; padding-bottom: 16px; }
+
+  /* En móvil: el marco ocupa mejor el alto */
+  .ofv-shell{
+    margin: 10px auto;
+    min-height: calc(100vh - 20px);
+  }
+}

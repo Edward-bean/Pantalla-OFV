@@ -4,21 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Nueva solicitud | Oficina Virtual</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/ofv.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
   </head>
 
   <body>
+    <div class="ofv-shell">
     <!-- Header -->
     <header class="ofv-header">
       <div class="ofv-header-inner">
         <div class="ofv-brand">
-          <img class="ofv-logo" src="./assets/img/dgii-logo.png" alt="DGII" />
+          <img class="ofv-logo" src="../assets/img/dgii-logo.png" alt="DGII" />
         </div>
 
         <nav class="ofv-mini">
           <a href="inicio.html">MI CUENTA</a>
           <span class="sep">|</span>
-          <a href="#">SALIR</a>
+          <a href="./login.html">SALIR</a>
         </nav>
       </div>
     </header>
@@ -59,9 +62,7 @@
       <!-- Content -->
       <main class="content">
         <div style="margin-bottom: 14px;">
-          <a href="solicitudes.html" style="text-decoration:none; color:#6b6b6b; font-weight:800;">
-            ← Volver a Solicitudes
-          </a>
+          <a class="btn small" href="solicitudes.html">VOLVER</a>
         </div>
 
         <div class="page-header">
@@ -195,8 +196,18 @@
           </div>
         </section>
 
-        <script src="./js/nueva_solicitud.js"></script>
+        <script src="../js/nueva_solicitud.js"></script>
       </main>
+    </div>
+    <footer class="ofv-footer">
+      <div>
+        Copyright DGII © 2026 . Todos los Derechos Reservados.
+        <a href="#">Términos de uso</a> | <a href="#">Privacidad</a>
+      </div>
+      <div class="line2">
+        Telf. 689-2181 · Av. México #48, Santo Domingo, Rep. Dom.
+       </div>
+      </footer>
     </div>
   </body>
 </html>

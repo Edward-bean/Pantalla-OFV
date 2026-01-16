@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Estado de solicitudes | Oficina Virtual</title>
+
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/ofv.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+  </head>
+
+  <body>
+    <div class="ofv-shell">
+      <header class="ofv-header">
+        <div class="ofv-header-inner">
+          <div class="ofv-brand">
+            <img class="ofv-logo" src="../assets/img/dgii-logo.png" alt="DGII" />
+          </div>
+
+          <nav class="ofv-mini">
+            <a href="inicio.html">MI CUENTA</a>
+            <span class="sep">|</span>
+            <a href="./login.html">SALIR</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="layout">
+        <!-- ✅ IMPORTANTE: mismo id que las pantallas que se ven bien -->
+        <aside class="sidebar" id="sidebarMenu">
+          <div class="sidebar-title">Menú Oficina Virtual</div>
+
+          <a class="nav-item" href="inicio.html">
+            <span class="dot"></span> Inicio
+          </a>
+
+          <details class="nav-group">
+            <summary class="nav-item">
+              <span class="dot"></span>
+              <span>Declaraciones Juradas</span>
+              <span class="chev">▶</span>
+            </summary>
+
+            <div class="nav-sub">
+              <a class="nav-subitem" href="#">Declaración Interactiva</a>
+              <a class="nav-subitem" href="#">Declaración IR-3</a>
+              <a class="nav-subitem" href="#">Declaraciones en Cero</a>
+              <a class="nav-subitem" href="#">Declaración Hidrocarburos</a>
+              <a class="nav-subitem" href="#">Declaración IR-13</a>
+              <a class="nav-subitem" href="#">Declaraciones Rectificativas</a>
+              <a class="nav-subitem" href="#">DTOR</a>
+              <a class="nav-subitem" href="#">Declaración RST</a>
+              <a class="nav-subitem" href="#">Declaración Contribución GLP</a>
+              <a class="nav-subitem" href="#">Envíos Complementarios</a>
+            </div>
+          </details>
+
+          <a class="nav-item active" href="solicitudes.html">
+            <span class="dot"></span> Solicitudes
+          </a>
+
+          <a class="nav-item" href="#"><span class="dot"></span> Citas</a>
+          <a class="nav-item" href="#"><span class="dot"></span> Notificaciones</a>
+          <a class="nav-item" href="#"><span class="dot"></span> Ayuda</a>
+        </aside>
+
+        <main class="content">
+          <div style="margin-bottom: 14px;">
+           <a class="btn small" href="solicitudes.html">VOLVER</a>
+          </div>
+
+          <div class="page-header">
+            <h1>Estado de solicitudes</h1>
+            <p>
+              Consulte el estado actual y el progreso de sus solicitudes en tiempo real.
+            </p>
+          </div>
+
+          <div class="table-head with-line">
+            <h2 class="section-title">Solicitudes en seguimiento</h2>
+          </div>
+
+          <section class="status-list">
+            <!-- Solicitud 1 -->
+            <article class="status-item">
+              <div class="status-main">
+                <div>
+                  <div class="status-id">SOL-2026-00021</div>
+                  <div class="status-type">Certificación de IPI</div>
+                  <div class="status-date">Registro: 08/01/2026</div>
+                </div>
+                <span class="badge blue">En revisión</span>
+              </div>
+
+              <div class="status-progress">
+                <div class="step done">
+                  <span class="dot-step"></span>
+                  <span class="label">Recibida</span>
+                </div>
+                <div class="step done">
+                  <span class="dot-step"></span>
+                  <span class="label">Validación</span>
+                </div>
+                <div class="step active">
+                  <span class="dot-step"></span>
+                  <span class="label">Revisión</span>
+                </div>
+                <div class="step">
+                  <span class="dot-step"></span>
+                  <span class="label">Finalizada</span>
+                </div>
+              </div>
+
+              <div class="status-actions">
+                <button class="btn small" type="button">VER DETALLE</button>
+              </div>
+            </article>
+
+            <!-- Solicitud 2 -->
+            <article class="status-item">
+              <div class="status-main">
+                <div>
+                  <div class="status-id">SOL-2025-01088</div>
+                  <div class="status-type">Actualización de RNC</div>
+                  <div class="status-date">Registro: 15/10/2025</div>
+                </div>
+                <span class="badge yellow">Pendiente docs</span>
+              </div>
+
+              <div class="status-progress">
+                <div class="step done">
+                  <span class="dot-step"></span>
+                  <span class="label">Recibida</span>
+                </div>
+                <div class="step active">
+                  <span class="dot-step"></span>
+                  <span class="label">Docs</span>
+                </div>
+                <div class="step">
+                  <span class="dot-step"></span>
+                  <span class="label">Revisión</span>
+                </div>
+                <div class="step">
+                  <span class="dot-step"></span>
+                  <span class="label">Finalizada</span>
+                </div>
+              </div>
+
+              <div class="status-actions">
+                <button class="btn small" type="button">VER DETALLE</button>
+              </div>
+            </article>
+
+            <!-- Solicitud 3 -->
+            <article class="status-item">
+              <div class="status-main">
+                <div>
+                  <div class="status-id">SOL-2025-00612</div>
+                  <div class="status-type">Reclamación de Pago</div>
+                  <div class="status-date">Registro: 02/06/2025</div>
+                </div>
+                <span class="badge green">Finalizada</span>
+              </div>
+
+              <div class="status-progress">
+                <div class="step done">
+                  <span class="dot-step"></span>
+                  <span class="label">Recibida</span>
+                </div>
+                <div class="step done">
+                  <span class="dot-step"></span>
+                  <span class="label">Validación</span>
+                </div>
+                <div class="step done">
+                  <span class="dot-step"></span>
+                  <span class="label">Revisión</span>
+                </div>
+                <div class="step done">
+                  <span class="dot-step"></span>
+                  <span class="label">Finalizada</span>
+                </div>
+              </div>
+
+              <div class="status-actions">
+                <button class="btn small" type="button">VER DETALLE</button>
+              </div>
+            </article>
+          </section>
+
+          <section class="info">
+            <div class="info-title">Información importante</div>
+            <div class="info-text">
+              Puede consultar el progreso por etapas. Los tiempos de respuesta dependerán del tipo
+              de solicitud.
+            </div>
+          </section>
+
+          <!-- ✅ IMPORTANTE: igual que las otras pantallas -->
+          <script src="../js/app.js"></script>
+        </main>
+      </div>
+
+      <footer class="ofv-footer">
+        <div>
+          Copyright DGII © 2026 . Todos los Derechos Reservados.
+          <a href="#">Términos de uso</a> | <a href="#">Privacidad</a>
+        </div>
+        <div class="line2">
+          Telf. 689-2181 · Av. México #48, Santo Domingo, Rep. Dom.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -209,10 +209,39 @@ btnBack3.addEventListener("click", () => setStep(2));
 
 [rnc, razon, correo, telefono].forEach((i) => i.addEventListener("input", validateStep2));
 
-// Submit (demo)
+// Submit (demo) => genera ID y redirige a confirmación
 btnSubmit.addEventListener("click", () => {
-  alert("Solicitud enviada (demo).");
+  // Seguridad: si por alguna razón está disabled, no hacemos nada
+  if (btnSubmit.disabled) return;
+
+  const year = new Date().getFullYear();
+  const seq = String(Math.floor(Math.random() * 90000) + 10000); // 5 dígitos
+  const id = `SOL-${year}-${seq}`;
+
+  // Guardamos un resumen para la pantalla de confirmación
+  const fecha = new Date().toLocaleString("es-DO", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  const tipo = tipos[selectedKey]?.titulo || "Solicitud";
+  sessionStorage.setItem(
+    "lastSolicitud",
+    JSON.stringify({
+      id,
+      tipo,
+      fecha,
+      correo: (correo?.value || "").trim(),
+    })
+  );
+
+  // Redirige a la pantalla nueva (en /ofv/)
+  window.location.href = `solicitud_enviada.html?id=${encodeURIComponent(id)}`;
 });
+
 
 // inicial
 setStep(1);
