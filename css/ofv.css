@@ -200,3 +200,141 @@ summary { list-style: none; outline: none; }
   .layout { flex-direction: column; }
   .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
 }
+
+/* ===== Barra superior: datos del contribuyente ===== */
+.ofv-userbar {
+  /* ✅ misma “posición” que imagen 2: pegado al contenido, no ancho completo */
+  padding: 0;
+  margin: 0 0 14px;
+}
+
+.ofv-userbar-inner {
+  background: #f6fff7;
+  border: 1px solid #cfe8d3;
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: var(--shadow);
+
+  /* ✅ que tome el mismo ancho/flujo del contenido */
+  width: 100%;
+}
+
+/* Versión compacta (solo Usuario + RNC) */
+.ofv-userbar-inner.compact {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.ub-item {
+  min-width: 0;
+}
+
+.ub-label {
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #1e7a2e;
+  margin-bottom: 2px;
+}
+
+.ub-value {
+  font-weight: 900;
+  color: #222;
+  font-size: 13px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ub-sub {
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* RNC + Razón Social en la misma línea */
+.ub-rnc .ub-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ub-rnc-num {
+  font-weight: 900;
+}
+
+.ub-rnc-sep {
+  opacity: .6;
+  font-weight: 900;
+}
+
+.ub-rnc-razon {
+  font-weight: 800;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ofv-userbar-inner.compact {
+    grid-template-columns: 1fr;
+  }
+
+  .ub-value,
+  .ub-sub {
+    white-space: normal;
+  }
+}
+
+.ub-grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.ub-block .ub-label {
+  margin-bottom: 2px;
+}
+
+/* ===== Barra usuario: 3 columnas horizontales ===== */
+.ofv-userbar-inner.row3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.4fr;
+  /* Empresa un poco más ancha */
+  gap: 20px;
+  align-items: center;
+}
+
+.ub-item {
+  min-width: 0;
+}
+
+.ub-label {
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #1e7a2e;
+  margin-bottom: 2px;
+}
+
+.ub-value {
+  font-size: 13px;
+  font-weight: 900;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ofv-userbar-inner.row3 {
+    grid-template-columns: 1fr;
+  }
+}

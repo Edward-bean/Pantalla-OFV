@@ -566,4 +566,275 @@
   display: grid;
   gap: 4px;
 }
+/* ===== Categorías (estilo tiles como imagen 2) ===== */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
 
+.cat-tile {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 22px 18px;
+  text-align: center;
+}
+
+.cat-ico {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 14px;
+  opacity: .55;
+  display: grid;
+  place-items: center;
+}
+
+.cat-ico svg {
+  width: 64px;
+  height: 64px;
+}
+
+.cat-title {
+  font-weight: 900;
+  color: #222;
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.cat-action {
+  margin-top: 14px;
+  font-weight: 900;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--green);
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #cfe8d3;
+  background: #fbfffb;
+}
+
+.cat-action:hover {
+  background: #f3fbf4;
+}
+
+/* Panel de servicios (lista de solicitudes) */
+.cat-services {
+  margin-top: 14px;
+  text-align: left;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  display: none;
+}
+
+.cat-tile.open .cat-services {
+  display: block;
+}
+
+.svc-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.svc-item:last-child {
+  border-bottom: none;
+}
+
+.svc-name {
+  font-weight: 900;
+  color: #222;
+  line-height: 1.25;
+}
+
+.svc-meta {
+  margin-top: 4px;
+  color: #666;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.svc-footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-all {
+  font-weight: 900;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--green);
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid #cfe8d3;
+  background: #fbfffb;
+}
+
+.btn-all:hover {
+  background: #f3fbf4;
+}
+/* Lista de solicitudes (Paso 2) */
+.solicitudes-list {
+  display: grid;
+  gap: 12px;
+}
+
+.svc-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.svc-left {
+  min-width: 0;
+}
+
+.svc-name {
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.svc-desc {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.svc-meta {
+  margin-top: 8px;
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #2b2b2b;
+}
+
+.svc-meta b {
+  color: #0f7a35;
+}
+
+.svc-tools {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 14px;
+}
+
+.svc-search {
+  flex: 1;
+  max-width: 420px;
+}
+
+.svc-search input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dfe6e1;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.svc-pager {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.svc-pages {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.svc-page {
+  min-width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid #b7d7c2;
+  background: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.svc-page.active {
+  background: #2fa64a;
+  color: #fff;
+  border-color: #2fa64a;
+}
+
+/* ============================
+   PAGINACIÓN (para #pagesWrap .page-num)
+   ============================ */
+
+#pagesWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Botón de página */
+#pagesWrap .page-num {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+
+  width: 34px !important;
+  height: 34px !important;
+  padding: 0 !important;
+
+  border: 1px solid #2fa84f !important;
+  border-radius: 8px !important;
+
+  background: #fff !important;
+  color: #2fa84f !important;
+
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 34px !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  box-shadow: none !important;
+  outline: none !important;
+
+  cursor: pointer !important;
+}
+
+/* Hover */
+#pagesWrap .page-num:hover {
+  background: #e9f7ee !important;
+}
+
+/* Activo */
+#pagesWrap .page-num.active {
+  background: #2fa84f !important;
+  color: #fff !important;
+  border-color: #2fa84f !important;
+}
